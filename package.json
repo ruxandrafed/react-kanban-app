@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ruxandrafed/react-kanban-app/issues"
   },
-  "homepage": "https://github.com/ruxandrafed/react-kanban-app#readme"
+  "homepage": "https://github.com/ruxandrafed/react-kanban-app#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
 }
