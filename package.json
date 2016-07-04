@@ -1,0 +1,28 @@
+{
+  "name": "ruxandra-kanban-app",
+  "version": "1.0.0",
+  "description": "Trello clone build with React, Webpack, Flux",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ruxandrafed/react-kanban-app.git"
+  },
+  "keywords": [
+    "react",
+    "kanban",
+    "survivejs",
+    "flux",
+    "webpack",
+    "trello",
+    "reactjs"
+  ],
+  "author": "Ruxandra Fediuc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruxandrafed/react-kanban-app/issues"
+  },
+  "homepage": "https://github.com/ruxandrafed/react-kanban-app#readme"
+}
