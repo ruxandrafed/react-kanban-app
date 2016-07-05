@@ -23,7 +23,12 @@ var common = {
         test: /\.jsx?$/,
         loaders: ['eslint'],
         include: PATHS.app
-      }
+      },
+      {
+        test: /\.css$/,
+        loaders: ['postcss'],
+        include: PATHS.app
+      },
     ],
     loaders: [
       {
@@ -32,6 +37,13 @@ var common = {
         include: PATHS.app
       }
     ]
+  },
+  postcss: function () {
+    return [stylelint({
+      rules: {
+        'color-hex-case': 2
+      }
+    })];
   },
   plugins: [
     new HtmlwebpackPlugin({
