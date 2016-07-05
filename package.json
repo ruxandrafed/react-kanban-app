@@ -27,7 +27,9 @@
   },
   "homepage": "https://github.com/ruxandrafed/react-kanban-app#readme",
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.22.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
