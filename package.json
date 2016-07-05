@@ -45,6 +45,7 @@
     "webpack-merge": "^0.14.0"
   },
   "dependencies": {
+    "array.prototype.findindex": "^2.0.0",
     "node-uuid": "^1.4.7",
     "react": "^15.2.0",
     "react-dom": "^15.2.0"
