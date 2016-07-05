@@ -3,6 +3,8 @@ var webpack = require('webpack');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
+var eslint = require('eslint');
+
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -16,6 +18,13 @@ var common = {
     filename: 'bundle.js'
   },
   module: {
+    preloaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['eslint'],
+        include: PATHS.app
+      }
+    ],
     loaders: [
       {
         test: /\.css$/,
