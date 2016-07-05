@@ -27,7 +27,10 @@ export default class App extends React.Component {
     return (
       <div>
         <button className="add-note" onClick={this.addNote}>+</button>
-        <Notes items={notes} onEdit={this.editNote} />
+        <Notes items={notes}
+          onEdit={this.editNote}
+          onDelete={this.deleteNote}
+        />
       </div>
     );
   }
@@ -58,5 +61,15 @@ export default class App extends React.Component {
       console.warn('Failed to find note', notes, id);
     }
     return noteIndex;
+  }
+  deleteNote = (id) => {
+    const notes = this.state.notes;
+    const noteIndex = this.findNote(id);
+    if (noteIndex < 0) {
+      return;
+    }
+    this.setState({
+      notes: notes.slice(0,noteIndex).concat(notes.slice(noteIndex + 1))
+    });
   }
 }
