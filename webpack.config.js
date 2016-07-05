@@ -6,6 +6,9 @@ var path = require('path');
 var eslint = require('eslint');
 
 const TARGET = process.env.npm_lifecycle_event;
+
+process.env.BABEL_ENV = TARGET;
+
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build')
