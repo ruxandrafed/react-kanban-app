@@ -13,6 +13,10 @@ const PATHS = {
 
 var common = {
   entry: PATHS.app,
+  /* add resolve.extensions */
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   output: {
     path: PATHS.build,
     filename: 'bundle.js'
@@ -34,6 +38,12 @@ var common = {
       {
         test: /\.css$/,
         loaders: ['style', 'css'],
+        include: PATHS.app
+      },
+      /* set up jsx */
+      {
+        test: /\.jsx?$/,
+        loaders: ['babel'],
         include: PATHS.app
       }
     ]
