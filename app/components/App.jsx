@@ -31,7 +31,15 @@ export default class App extends React.Component {
       </div>
     );
   }
-  addNote() {
-    console.log('add note');
+  addNote = () => {
+    this.setState({
+      notes: this.state.notes.concat([
+        {
+          id: uuid.v4(),
+          task: 'Jump around'
+        }
+      ])
+    });
+    // console.log('add note');
   }
 }
